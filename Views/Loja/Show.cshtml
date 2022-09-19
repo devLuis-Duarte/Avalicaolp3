@@ -1,0 +1,61 @@
+@model List<Avaliacao3bim.ViewModels.LojaViewModel>
+    
+@{
+    ViewData["Title"] = "Lojas";
+}
+
+<h1>Lojas Cadastradas</h1>
+
+@if(Model.Count == 0){
+    <p>Nenhuma Loja Cadastrada</p>
+    <form action="/Loja/Cadastrar">
+        <button class="btn btn-primary">Cadastrar</button>
+    </form>
+}else {
+    <p>@Model.Count Lojas cadastradas</p>
+    
+    <table class="table" border="10px solid-black">
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>Piso</th>
+            <th>Nome</th>
+            <th>Descricao</th>
+            <th>Definicao(loja/kiosque)</th>
+            <th>E-mail</th>
+            <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+    @foreach(var loja in Model)
+    {
+        <tr>
+                    <th>@loja.Id</th>
+                    <td>@loja.Piso</td>
+                    <td>@loja.Nome</td>
+                    <td>@loja.Descricao</td>
+                    <td>@loja.Definicao</td>
+                    <td>@loja.Email</td>
+                    <td>
+                        
+                        <form action="/Loja/Delete/@loja.Id">
+                            <button class="btn btn-danger">Deletar</button>
+                        </form>
+
+                        <br>
+                        
+                        <form action="/Loja/DetalhesLoja/@loja.Id">
+                            <button class="btn btn-primary">Ver detalhes</button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+
+        
+    }
+

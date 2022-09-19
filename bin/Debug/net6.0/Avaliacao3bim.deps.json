@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Avaliacao3bim/1.0.0": {
+        "runtime": {
+          "Avaliacao3bim.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Avaliacao3bim/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

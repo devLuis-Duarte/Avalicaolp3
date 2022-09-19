@@ -1,0 +1,25 @@
+@model Avaliacao3bim.ViewModels.LojaViewModel;
+
+@{
+    ViewData["Title"] = "Detalhes da loja " + @Model.Nome;
+}
+<div class="text-center">
+    <div class="container">
+        <div class="text-left">
+            <h3>@Model.Nome</h3>
+            <hr>
+           
+        </div>
+    </div>    
+</div>
+
+<p>Id @Model.Id</p>
+<p>Piso @Model.Piso</p>
+<p>Definicao @Model.Definicao</p>
+<p>Email @Model.Email</p>
+<p class="text-break">Descriçao: @Model.Descricao</p>
+
+
+<form action="/Loja/Delete/@Model.Id">
+    <button class="btn btn-danger">Deletar</button>
+</form>

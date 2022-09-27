@@ -28,6 +28,9 @@ public class LojaController : Controller
    public IActionResult Show(){
         return View(lojas);
    }
+   public IActionResult ShowToUser(){
+        return View(lojas);
+   }
    public IActionResult DetalhesLoja(int id){
         return View(lojas[id-1]);
    }
